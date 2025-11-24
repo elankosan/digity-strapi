@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": "Application pages with dynamic content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "application": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::application.application",
+      "inversedBy": "pages",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "path": {
+      "type": "string",
+      "required": true,
+      "default": "/"
+    },
+    "metaTitle": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "metaDescription": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "metaKeywords": {
+      "type": "string"
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "contentBlocks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::content-block.content-block",
+      "mappedBy": "page"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "showInNavigation": {
+      "type": "boolean",
+      "default": true
+    },
+    "navigationLabel": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "template": {
+      "type": "enumeration",
+      "enum": ["default", "landing", "full-width", "sidebar-left", "sidebar-right"],
+      "default": "default"
+    },
+    "customCSS": {
+      "type": "text"
+    }
+  }
+}

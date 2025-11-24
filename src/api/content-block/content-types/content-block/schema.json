@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_blocks",
+  "info": {
+    "singularName": "content-block",
+    "pluralName": "content-blocks",
+    "displayName": "Content Block",
+    "description": "Reusable content blocks for pages"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page.page",
+      "inversedBy": "contentBlocks",
+      "required": true
+    },
+    "blockType": {
+      "type": "enumeration",
+      "enum": [
+        "hero",
+        "text",
+        "image",
+        "card-grid",
+        "table",
+        "form",
+        "cta",
+        "gallery",
+        "video",
+        "accordion",
+        "tabs",
+        "testimonials",
+        "pricing",
+        "features",
+        "stats",
+        "team",
+        "faq",
+        "contact",
+        "map",
+        "divider",
+        "spacer",
+        "html"
+      ],
+      "required": true
+    },
+    "content": {
+      "type": "json",
+      "required": true
+    },
+    "styling": {
+      "type": "json",
+      "required": true,
+      "default": {
+        "container": {
+          "backgroundColor": "transparent",
+          "backgroundImage": null,
+          "backgroundSize": "cover",
+          "backgroundPosition": "center",
+          "paddingTop": 16,
+          "paddingRight": 16,
+          "paddingBottom": 16,
+          "paddingLeft": 16,
+          "marginTop": 0,
+          "marginRight": 0,
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "borderRadius": 0,
+          "borderColor": "transparent",
+          "borderWidth": 0,
+          "borderStyle": "solid",
+          "maxWidth": "full",
+          "minHeight": null
+        },
+        "text": {
+          "color": "inherit",
+          "fontSize": "base",
+          "fontWeight": "normal",
+          "textAlign": "left",
+          "lineHeight": "normal",
+          "letterSpacing": "normal"
+        },
+        "animation": {
+          "enabled": false,
+          "type": "fade-in",
+          "duration": 500,
+          "delay": 0
+        },
+        "customCSS": ""
+      }
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "required": true
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "anchorId": {
+      "type": "string"
+    }
+  }
+}
