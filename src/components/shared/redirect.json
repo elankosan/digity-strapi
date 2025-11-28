@@ -1,0 +1,26 @@
+{
+    "collectionName": "components_shared_redirects",
+    "info": {
+        "displayName": "Redirect",
+        "icon": "arrow-right",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "from": {
+            "type": "string"
+        },
+        "to": {
+            "type": "string"
+        },
+        "statusCode": {
+            "type": "enumeration",
+            "enum": [
+                "301",
+                "302",
+                "308",
+                "404"
+            ]
+        }
+    }
+}

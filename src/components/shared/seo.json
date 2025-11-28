@@ -1,0 +1,31 @@
+{
+    "collectionName": "components_shared_seos",
+    "info": {
+        "displayName": "Seo",
+        "icon": "search",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "shareImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "noIndex": {
+            "type": "boolean"
+        }
+    }
+}

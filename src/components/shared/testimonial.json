@@ -1,0 +1,33 @@
+{
+    "collectionName": "components_shared_testimonials",
+    "info": {
+        "displayName": "Testimonial",
+        "icon": "quote-right",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "quote": {
+            "type": "text"
+        },
+        "author": {
+            "type": "string"
+        },
+        "project": {
+            "type": "string"
+        },
+        "rating": {
+            "type": "integer",
+            "min": 1,
+            "max": 5
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        }
+    }
+}

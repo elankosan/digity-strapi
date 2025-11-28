@@ -1,0 +1,20 @@
+{
+    "collectionName": "components_sections_forms",
+    "info": {
+        "displayName": "Form",
+        "icon": "envelope",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "formId": {
+            "type": "string"
+        },
+        "successMessage": {
+            "type": "richtext"
+        },
+        "fields": {
+            "type": "json"
+        }
+    }
+}

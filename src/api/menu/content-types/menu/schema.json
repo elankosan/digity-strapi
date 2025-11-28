@@ -1,0 +1,35 @@
+{
+    "kind": "collectionType",
+    "collectionName": "menus",
+    "info": {
+        "singularName": "menu",
+        "pluralName": "menus",
+        "displayName": "Menu",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "items": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.link"
+        },
+        "application": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::app-config.app-config",
+            "inversedBy": "menus"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_sections_testimonials",
+    "info": {
+        "displayName": "Testimonials",
+        "icon": "comments",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "heading": {
+            "type": "string"
+        },
+        "subline": {
+            "type": "string"
+        },
+        "items": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.testimonial"
+        }
+    }
+}

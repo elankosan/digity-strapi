@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_sections_cards",
+    "info": {
+        "displayName": "Cards",
+        "icon": "th-large",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "columns": {
+            "type": "integer"
+        },
+        "cards": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.card"
+        }
+    }
+}

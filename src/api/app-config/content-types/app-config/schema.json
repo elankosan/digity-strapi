@@ -1,0 +1,58 @@
+{
+    "kind": "collectionType",
+    "collectionName": "app_configs",
+    "info": {
+        "singularName": "app-config",
+        "pluralName": "app-configs",
+        "displayName": "App Config",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "name": {
+            "type": "uid",
+            "targetField": "displayName"
+        },
+        "displayName": {
+            "type": "string"
+        },
+        "domains": {
+            "type": "json"
+        },
+        "locales": {
+            "type": "json"
+        },
+        "theme": {
+            "type": "json"
+        },
+        "favicon": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "globalSEO": {
+            "type": "component",
+            "repeatable": false,
+            "component": "shared.seo"
+        },
+        "menus": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::menu.menu",
+            "mappedBy": "application"
+        }
+    }
+}
